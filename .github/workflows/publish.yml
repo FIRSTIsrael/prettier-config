@@ -1,0 +1,29 @@
+name: Node.js Package
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        name: Setup .npmrc file to publish to npm
+        with:
+          node-version: '10.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install
+      - run: npm publish --access public
+        name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - uses: actions/setup-node@v1
+        name: Setup .npmrc file to publish to GitHub Packages
+        with:
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@FIRSTIsrael'
+      - run: npm publish
+        name: Publish to GitHub Packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

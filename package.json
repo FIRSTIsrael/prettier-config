@@ -1,0 +1,16 @@
+{
+  "name": "@firstisrael/prettier-config",
+  "version": "1.0.0",
+  "main": "prettier.json",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "prettier.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FIRSTIsrael/first-partners.git"
+  }
+}
