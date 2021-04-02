@@ -1,0 +1,8 @@
+dist/
+build/
+node_modules/
+.cache/
+.next
+.vercel
+package*.json
+yarn-lock.json

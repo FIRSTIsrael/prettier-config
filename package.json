@@ -1,13 +1,15 @@
 {
   "name": "@firstisrael/prettier-config",
-  "version": "1.0.2",
-  "main": "prettier.json",
+  "version": "1.1.0",
   "license": "MIT",
+  "author": "FIRST Israel",
+  "main": "prettier.json",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "prettier.json"
+    "prettier.json",
+    ".prettierignore"
   ],
   "repository": {
     "type": "git",
